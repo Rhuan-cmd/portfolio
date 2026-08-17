@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+
 :root {
     /* =========================
        FUNDO
@@ -111,6 +113,8 @@
     --button-border: #3F8F5A;
 
     --explorer-width: 200px;
+    --azul-calcinha: #45a5bd;
+    --azul-calcinha-molhada: #337686;
 }
 
 * {
@@ -125,6 +129,9 @@ body {
     overflow-x: hidden;
     background: var(--bg-gradient);
     color: var(--text);
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .web-layout {
@@ -150,23 +157,76 @@ body {
     border-right: none;
 }
 
+.explorer-bar.closed img {
+    filter: brightness(40%);
+}
+
 .explorer-button {
     width: 50px;
     height: 50px;
-    background-color: pink;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-left: 0px solid var(--info);
 }
 
-.explorer-button:hover{
+.select {
+    border-left: 2px solid var(--info);
+}
+
+.explorer-button:hover {
     cursor: pointer;
 }
 
-.archives-content{
+.archives-content {
     width: 100%;
     height: 100%;
-    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    font-size: 20px;
+}
+
+.archives-folder{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+}
+
+.archives {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding: 30px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.archives:hover {
+    background-color: var(--window-light);
+    border: 2px solid var(--azul-calcinha-molhada);
+}
+
+.select-archive {
+    background-color: var(--azul-calcinha);
+    border: 2px solid var(--azul-calcinha-molhada);
+}
+
+.line{
+    width: 2px;
+    height: 360px;
+    background-color: var(--panel-active);
+    position: absolute;
+    top: 100px;
+    left: 20px;
 }
 
 .main-content {
