@@ -1,0 +1,207 @@
+:root {
+    /* =========================
+       FUNDO
+       ========================= */
+
+    --bg-main: #07100D;
+    --bg-green: #0B241A;
+    --bg-gradient:
+        radial-gradient(
+            circle at 50% 30%,
+            #0D2A1E 0%,
+            #091812 45%,
+            #050A08 100%
+        );
+
+
+    /* =========================
+       JANELAS / PAINÉIS
+       ========================= */
+
+    --window: #151B19;
+    --window-light: #1B2420;
+    --window-dark: #101513;
+
+    --panel: #18201D;
+    --panel-hover: #202A26;
+    --panel-active: #26332E;
+
+
+    /* =========================
+       BORDAS
+       ========================= */
+
+    --border: #303A36;
+    --border-light: #3B4842;
+    --border-green: #315C46;
+
+
+    /* =========================
+       VERDE PRINCIPAL
+       ========================= */
+
+    --green: #55C878;
+    --green-light: #72E394;
+    --green-dark: #2F8F50;
+    --green-hover: #64D985;
+
+    --green-muted: #3F7652;
+
+
+    /* =========================
+       TEXTO
+       ========================= */
+
+    --text: #E4EAE6;
+    --text-secondary: #A2AEA7;
+    --text-muted: #6F7D75;
+
+    --text-green: #70D98B;
+
+
+    /* =========================
+       CORES DE SINTAXE
+       ========================= */
+
+    --syntax-green: #7EE787;
+    --syntax-blue: #79C0FF;
+    --syntax-purple: #D2A8FF;
+    --syntax-yellow: #E3B341;
+    --syntax-orange: #FFA657;
+    --syntax-red: #FF7B72;
+
+
+    /* =========================
+       STATUS
+       ========================= */
+
+    --success: #3FB950;
+    --warning: #D29922;
+    --error: #F85149;
+    --info: #58A6FF;
+
+
+    /* =========================
+       SOMBRAS
+       ========================= */
+
+    --shadow:
+        0 8px 25px rgba(0, 0, 0, 0.35);
+
+    --shadow-window:
+        0 4px 15px rgba(0, 0, 0, 0.25);
+
+
+    /* =========================
+       TERMINAL
+       ========================= */
+
+    --terminal-bg: #08100D;
+    --terminal-green: #55C878;
+    --terminal-text: #B8C7BD;
+
+
+    /* =========================
+       LINKS / BOTÕES
+       ========================= */
+
+    --link: #55C878;
+    --button: #1C3D2A;
+    --button-hover: #28583A;
+    --button-border: #3F8F5A;
+
+    --explorer-width: 200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    width: 100dvw;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    background: var(--bg-gradient);
+    color: var(--text);
+}
+
+.web-layout {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    min-height: 100dvh;
+    width: 100%;
+}
+
+.explorer-bar {
+    width: var(--explorer-width);
+    height: 100dvh;
+    position: sticky;
+    top: 0;
+    background-color: var(--window-dark);
+    border-right: 1px solid var(--border);
+    transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+.explorer-bar.closed {
+    width: 50px;
+    overflow: hidden;
+    border-right: none;
+}
+
+.explorer-button {
+    width: 50px;
+    height: 50px;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.explorer-button:hover{
+    cursor: pointer;
+}
+
+.archives-content{
+    width: 100%;
+    height: 100%;
+    background-color: green;
+}
+
+.main-content {
+    width: 100%;
+    min-width: 0;
+}
+
+.section {
+    width: 100%;
+    height: 100dvh;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.tab-window {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 120px;
+    height: 50px;
+    background: var(--window);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-window);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.window {
+    width: 100%;
+    height: 100%;
+    background: var(--window);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-window);
+    border-radius: 0px 10px 10px 10px;
+}
