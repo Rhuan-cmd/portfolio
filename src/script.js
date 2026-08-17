@@ -17,13 +17,15 @@ const path = ["#home", "#sobre", "#skills", "#projects", "#experience", "#contac
 
 archives.forEach((element, id) => {
     element.addEventListener("click", () => {
-        
-        if (element.className.includes("select-archive")) {
-            element.classList.remove("select-archive");
-        }else {
-            element.classList.add("select-archive");
-        }
+        limparSelect();
+        element.classList.add("select-archive");
         
         window.location.href = path[id];
     });
 });
+
+function limparSelect() {
+    archives.forEach((element) => {
+        element.classList.remove("select-archive");
+    });
+}
