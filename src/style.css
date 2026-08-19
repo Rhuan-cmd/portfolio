@@ -1,120 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
 
 :root {
-    /* =========================
-       FUNDO
-       ========================= */
+    --bg: #0d1117;
+    --sidebar: #161b22;
+    --card: #12161f;
+    --header: #1c2128;
+    --border: #30363d;
+    --hover: #21262d;
+    --green: #10b981;
+    --greenDim: #059669;
+    --text: #c9d1d9;
+    --muted: #8b949e;
+    --cyan: #38bdf8;
+    --yellow: #eab308;
+    --purple: #c084fc;
 
-    --bg-main: #07100D;
-    --bg-green: #0B241A;
-    --bg-gradient:
-        radial-gradient(
-            circle at 50% 30%,
-            #0D2A1E 0%,
-            #091812 45%,
-            #050A08 100%
-        );
-
-
-    /* =========================
-       JANELAS / PAINÉIS
-       ========================= */
-
-    --window: #151B19;
-    --window-light: #1B2420;
-    --window-dark: #101513;
-
-    --panel: #18201D;
-    --panel-hover: #202A26;
-    --panel-active: #26332E;
-
-
-    /* =========================
-       BORDAS
-       ========================= */
-
-    --border: #303A36;
-    --border-light: #3B4842;
-    --border-green: #315C46;
-
-
-    /* =========================
-       VERDE PRINCIPAL
-       ========================= */
-
-    --green: #55C878;
-    --green-light: #72E394;
-    --green-dark: #2F8F50;
-    --green-hover: #64D985;
-
-    --green-muted: #3F7652;
-
-
-    /* =========================
-       TEXTO
-       ========================= */
-
-    --text: #E4EAE6;
-    --text-secondary: #A2AEA7;
-    --text-muted: #6F7D75;
-
-    --text-green: #70D98B;
-
-
-    /* =========================
-       CORES DE SINTAXE
-       ========================= */
-
-    --syntax-green: #7EE787;
-    --syntax-blue: #79C0FF;
-    --syntax-purple: #D2A8FF;
-    --syntax-yellow: #E3B341;
-    --syntax-orange: #FFA657;
-    --syntax-red: #FF7B72;
-
-
-    /* =========================
-       STATUS
-       ========================= */
-
-    --success: #3FB950;
-    --warning: #D29922;
-    --error: #F85149;
-    --info: #58A6FF;
-
-
-    /* =========================
-       SOMBRAS
-       ========================= */
-
-    --shadow:
-        0 8px 25px rgba(0, 0, 0, 0.35);
-
-    --shadow-window:
-        0 4px 15px rgba(0, 0, 0, 0.25);
-
-
-    /* =========================
-       TERMINAL
-       ========================= */
-
-    --terminal-bg: #08100D;
-    --terminal-green: #55C878;
-    --terminal-text: #B8C7BD;
-
-
-    /* =========================
-       LINKS / BOTÕES
-       ========================= */
-
-    --link: #55C878;
-    --button: #1C3D2A;
-    --button-hover: #28583A;
-    --button-border: #3F8F5A;
-
-    --explorer-width: 200px;
-    --select-archive: #45a5bd;
-    --select-archive-hover: #3b8da1;
+    --explorer-width: 250px;
 }
 
 * {
@@ -131,7 +32,7 @@ body {
     width: 100%;
     min-height: 100dvh;
     overflow-x: hidden;
-    background: var(--bg-gradient);
+    background: var(--bg);
     color: var(--text);
     font-family: "Jersey 25", sans-serif;
     font-weight: 400;
@@ -150,7 +51,7 @@ body {
     height: 100dvh;
     position: sticky;
     top: 0;
-    background-color: var(--window-dark);
+    background-color: var(--sidebar);
     border-right: 1px solid var(--border);
     transition: margin-left 0.3s ease, width 0.3s ease;
 }
@@ -203,7 +104,7 @@ body {
 }
 
 .select {
-    border-left-color: var(--info);
+    border-left-color: var(--green);
 }
 
 .explorer-button:hover {
@@ -249,21 +150,17 @@ body {
 }
 
 .archives:hover {
-    background-color: var(--window-light);
+    background-color: var(--hover);
 }
 
 .select-archive {
-    background-color: var(--select-archive);
-}
-
-.archives.select-archive:hover {
-    background-color: var(--select-archive-hover);
+    background-color: var(--hover);
 }
 
 .line{
     width: 2px;
     height: 360px;
-    background-color: var(--panel-active);
+    background-color: var(--hover);
     position: absolute;
     top: 100px;
     left: 20px;
@@ -291,9 +188,8 @@ body {
     gap: 5px;
     width: 150px;
     height: 50px;
-    background: var(--window);
+    background: var(--header);
     border: 1px solid var(--border);
-    box-shadow: var(--shadow-window);
     border-radius: 10px 10px 0px 0px;
 }
 
@@ -305,8 +201,7 @@ body {
 .window {
     width: 100%;
     height: 100%;
-    background: var(--window);
+    background: var(--card);
     border: 1px solid var(--border);
-    box-shadow: var(--shadow-window);
     border-radius: 0px 10px 10px 10px;
 }
